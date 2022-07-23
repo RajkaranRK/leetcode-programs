@@ -1,7 +1,6 @@
-package com.rk.leetcode.interview;
+package com.rk.leetcode.interview.recursion;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StringPermutation {
