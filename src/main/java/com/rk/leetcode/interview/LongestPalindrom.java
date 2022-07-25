@@ -1,6 +1,5 @@
 package com.rk.leetcode.interview;
 
-import com.sun.deploy.util.StringUtils;
 
 public class LongestPalindrom {
 
