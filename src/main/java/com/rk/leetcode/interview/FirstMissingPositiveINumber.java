@@ -17,7 +17,7 @@ public class FirstMissingPositiveINumber {
     public int firstMissingPositive(int[] nums) {
         Set<Integer> numSet = new TreeSet<>();
         for(int i=0; i<nums.length;i++) {
-            if(nums[i]>0)
+            if(nums[i]>0 &&  nums[i] <= nums.length)
                 numSet.add(nums[i]);
         }
         Iterator<Integer> iter = numSet.iterator();
