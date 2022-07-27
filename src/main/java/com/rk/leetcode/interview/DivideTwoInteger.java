@@ -8,9 +8,6 @@ public class DivideTwoInteger {
         System.out.println("Result "+result);
         
         
-        
-       
-        result = divideTwoInteger.divide2(16, 3);
         System.out.println("Result "+result);
     }
     
@@ -35,7 +32,7 @@ public class DivideTwoInteger {
     }
     
     
-    public int divide(int dividend, int divisor) {    
+    public int divide2(int dividend, int divisor) {    
         int result = 0;
         int temp = 0;
         boolean sign = dividend >=0 == divisor >=0 ? true : false;
