@@ -8,7 +8,7 @@ public class StringPermutation {
     public static void main(String []args){
         StringPermutation stringPermutation = new StringPermutation();
         List<String> permutations = new ArrayList<>();
-        stringPermutation.findPermutation("abcdefghi",0,permutations);
+        stringPermutation.findPermutation("abc",0,permutations);
         System.out.println(permutations);
         System.out.println(permutations.size());
     }
