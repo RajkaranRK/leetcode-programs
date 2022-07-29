@@ -36,4 +36,27 @@ public class MergeArray {
             System.out.print(k[o]+",");
         }
     }
+    
+    
+    public void mergeApproach2(int[] nums1, int m, int[] nums2, int n) {
+        int i =0;
+        int j =0;
+        int k =0;
+        while(k< (m+ n)){
+            if(i<m && j<n){
+                if(nums1[i] <= nums2[j]){
+                    i++;
+                }else{
+                    swap(nums1,nums2,i,j);
+                    j++;
+                }
+            }
+        }
+    }
+    
+    private void swap(int nums1[],int nums2[],int i,int j) {
+        int temp = nums1[i];
+        nums1[i] = nums2[j];
+        nums2[j] = temp; 
+    }
 }
