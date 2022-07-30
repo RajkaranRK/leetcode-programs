@@ -68,15 +68,65 @@ public class AddNumber {
     
     public static void main(String []args) {
         AddNumber addNumber = new AddNumber();
-        ListNode l1 = addNumber.insert(new int[] {9,9,9,9,9,9,9});
+//        ListNode l1 = addNumber.insert(new int[] {9,9,9,9,9,9,9});
+//        ListNode l2 = addNumber.insert(new int[] {9,9,9,9});
+//        System.out.println("list 1");
+//        addNumber.printNode(l1);
+//        System.out.println("\n");
+//        System.out.println("list 2");
+//        addNumber.printNode(l2);
+//        ListNode sumList =   addNumber.addTwoNumbers(l1,l2);
+//        System.out.println("Sum list");
+//        addNumber.printNode(sumList);
+        
+        ListNode l1 = null;
         ListNode l2 = addNumber.insert(new int[] {9,9,9,9});
         System.out.println("list 1");
         addNumber.printNode(l1);
         System.out.println("\n");
         System.out.println("list 2");
         addNumber.printNode(l2);
-        ListNode sumList =   addNumber.addTwoNumbers(l1,l2);
+        ListNode sumList =   addNumber.addTwoNumbers2(l1,l2,0);
         System.out.println("Sum list");
         addNumber.printNode(sumList);
+    }
+    
+    
+    
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2,int carry) {
+        if(l1 == null && l2 == null) {
+            if(carry == 1) {
+                return new ListNode(carry);
+            }
+            return null;
+        }
+        int v1 = 0;
+        int v2 = 0;
+        if(l1 != null) {
+           v1 = l1.val;
+        }
+        if(l2 != null) {
+            v2 = l2.val;
+        }
+        int sum = v1 + v2 + carry;
+        carry = sum / 10;
+        sum = sum % 10;
+        if(l1 == null) {
+            l2.val = sum;
+            if(carry == 1) {
+                l2.next = addTwoNumbers2(l1, l2.next, carry);    
+            }
+            return l2;
+        }
+        if(l2 == null) {
+            l1.val = sum;
+            if(carry == 1) {
+                l1.next = addTwoNumbers2(l1.next, l2,carry);   
+            }
+            return l1;
+        }
+        l1.val = sum;
+        l1.next = addTwoNumbers2(l1.next, l2.next,carry);
+        return l1;
     }
 }
