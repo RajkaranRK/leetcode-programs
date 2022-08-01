@@ -10,6 +10,10 @@ import java.util.Map;
 public class BestSumArray {
     
     
+    /**
+     * Need to work on the memoization 
+     * @param args
+     */
     public static void main(String []args) {
         
         BestSumArray bestSum = new BestSumArray();
@@ -20,10 +24,6 @@ public class BestSumArray {
     
     
     public List<Integer> findBestSum(int targetSum, int []arr,Map<Integer, List<Integer>> memo){
-        if(memo.containsKey(targetSum)) {
-            System.out.println(targetSum+":"+memo.get(targetSum)+ " "+(memo.get(targetSum) != null ? memo.get(targetSum).toString() : null));
-            return memo.get(targetSum);
-        }
         if(targetSum == 0) {
             List<Integer> myList = new ArrayList<>();
             return myList;
@@ -42,8 +42,6 @@ public class BestSumArray {
                 }
             }
         }
-        System.out.println("While inserting "+targetSum+":"+shortestCombination+" "+ (shortestCombination !=null ? shortestCombination.toString(): null));
-        memo.put(targetSum, shortestCombination);
         return shortestCombination;
     }
     
