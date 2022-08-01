@@ -39,7 +39,8 @@ public class BestSumArray {
             int remainder = targetSum - arr[i];
             List<Integer> numList = findBestSum(remainder , arr,memo);
             if(numList != null) {
-                List<Integer> newList = new ArrayList<>(numList); //created a new array so it won't effect the prev
+              //created a new array so it won't effect the prev
+                List<Integer> newList = new ArrayList<>(numList); 
                 newList.add(arr[i]);
                 if(shortestCombination == null || shortestCombination.size() > newList.size()) {
                     shortestCombination = newList;
