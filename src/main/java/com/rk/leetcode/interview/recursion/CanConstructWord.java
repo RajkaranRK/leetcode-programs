@@ -12,6 +12,10 @@ public class CanConstructWord {
                 , new String[] {"ab","abc","cd","def","abcd"},new HashMap<>());
         System.out.println(canConstruct);
         
+        
+        canConstruct  = canConstructWord.canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" 
+                , new String[] {"e","ee","eee","eeee","eeeee"},new HashMap<>());
+        System.out.println(canConstruct);
     }
     
     
