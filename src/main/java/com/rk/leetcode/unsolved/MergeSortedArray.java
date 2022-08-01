@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview;
+package com.rk.leetcode.unsolved;
 
 import java.util.Arrays;
 

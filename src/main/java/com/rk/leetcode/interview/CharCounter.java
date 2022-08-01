@@ -3,6 +3,14 @@ package com.rk.leetcode.interview;
 import java.util.Map;
 import java.util.TreeMap;
 
+
+
+/**
+ * This method do the counting of the character and return the character with count  i.e. a<count> 
+ * in decitionay order 
+ * @author Rajkaran
+ *
+ */
 public class CharCounter {
 
     public class Counter{
