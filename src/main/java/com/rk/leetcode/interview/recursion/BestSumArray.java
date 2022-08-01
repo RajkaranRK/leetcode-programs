@@ -24,6 +24,9 @@ public class BestSumArray {
     
     
     public List<Integer> findBestSum(int targetSum, int []arr,Map<Integer, List<Integer>> memo){
+        if(memo.containsKey(targetSum)) {
+            return memo.get(targetSum);
+        }
         if(targetSum == 0) {
             List<Integer> myList = new ArrayList<>();
             return myList;
@@ -36,12 +39,14 @@ public class BestSumArray {
             int remainder = targetSum - arr[i];
             List<Integer> numList = findBestSum(remainder , arr,memo);
             if(numList != null) {
-                numList.add(arr[i]);
-                if(shortestCombination == null || shortestCombination.size() > numList.size()) {
-                    shortestCombination = new ArrayList<>(numList);
+                List<Integer> newList = new ArrayList<>(numList); //created a new array so it won't effect the prev
+                newList.add(arr[i]);
+                if(shortestCombination == null || shortestCombination.size() > newList.size()) {
+                    shortestCombination = newList;
                 }
             }
         }
+        memo.put(targetSum, shortestCombination);
         return shortestCombination;
     }
     
