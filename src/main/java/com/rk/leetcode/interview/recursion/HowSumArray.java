@@ -16,7 +16,7 @@ public class HowSumArray {
         sets.stream().forEach(System.out::println);
 
         System.out.println("*****************************************************");
-        List<Integer> set =  howSumArray.findSumCombination2(7,arr);
+        List<Integer> set =  howSumArray.findSumCombination2(7,arr,new HashMap<>());
         System.out.println(set);
     }
 
@@ -45,7 +45,10 @@ public class HowSumArray {
 
 
     //method to return any existing possibility
-    public List<Integer> findSumCombination2(int target, int[]numbers){
+    public List<Integer> findSumCombination2(int target, int[]numbers,Map<Integer,List<Integer>> memo){
+        if(memo.containsKey(target)) {
+            return memo.get(target);
+        }
         if(target == 0){
             return new ArrayList<>();
         }
@@ -54,14 +57,17 @@ public class HowSumArray {
         }
         for(int i=0; i < numbers.length;i++){
             int remainder = target - numbers[i];
-            List<Integer> numList = findSumCombination2(remainder, numbers);
+            List<Integer> numList = findSumCombination2(remainder, numbers,memo);
             if(numList != null){
                 numList.add(numbers[i]);
                 Collections.sort(numList);
+                memo.put(target, numList);
                 return numList;
             }
 
         }
+        
+        memo.put(target, null);
         return null;
     }
 
