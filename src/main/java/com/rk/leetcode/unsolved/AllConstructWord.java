@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * This problem need to improve using the memoization DP 
+ * 
+ * @author Raj Karan
+ *
+ */
 public class AllConstructWord {
     
     public static void main(String []args) {
