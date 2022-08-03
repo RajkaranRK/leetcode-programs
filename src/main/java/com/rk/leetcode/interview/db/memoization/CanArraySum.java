@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview.recursion;
+package com.rk.leetcode.interview.db.memoization;
 
 
 /**
@@ -8,7 +8,6 @@ package com.rk.leetcode.interview.recursion;
  */
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * It's considered as all the element should be non-negative
