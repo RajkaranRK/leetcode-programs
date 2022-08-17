@@ -9,6 +9,6 @@ public class GridTraveler {
 
 
     public long findAllPossiblePath(int m,int n){
-
+        return 0;
     }
 }
