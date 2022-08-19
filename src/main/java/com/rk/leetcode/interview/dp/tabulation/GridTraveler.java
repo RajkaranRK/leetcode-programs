@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview.db.tabulation;
+package com.rk.leetcode.interview.dp.tabulation;
 
 public class GridTraveler {
 

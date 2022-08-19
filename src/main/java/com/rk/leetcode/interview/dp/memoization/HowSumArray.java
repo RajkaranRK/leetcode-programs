@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview.db.memoization;
+package com.rk.leetcode.interview.dp.memoization;
 
 import java.util.*;
 
