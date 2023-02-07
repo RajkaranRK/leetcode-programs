@@ -1,7 +1,7 @@
 package com.rk.leetcode.interview;
 
 import com.rk.leetcode.ListNode;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 
 public class MergeLinkedList {
 

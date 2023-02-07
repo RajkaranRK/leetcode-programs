@@ -11,7 +11,7 @@ public class HowSumArray {
     public static void main(String []args){
         HowSumArray howSumArray = new HowSumArray();
         Set<List<Integer>> sets = new HashSet<>();
-        int arr[] = new int[] {2,4,3};
+        int arr[] = new int[] {2,4,3,7,5,1};
         howSumArray.findSumCombination(7,arr,null,sets);
         sets.stream().forEach(System.out::println);
 
