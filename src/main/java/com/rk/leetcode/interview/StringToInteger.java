@@ -35,4 +35,35 @@ public class StringToInteger {
         }
         return s.charAt(0) == '-' ? ans * -1 : ans;
     }
+
+
+    public static int convertToInt(String str){
+        str = str.trim();
+        if(str.length() == 0){
+            return 0;
+        }
+        int i = 0;
+        if(str.charAt(i) == '-' || str.charAt(i) == '+'){
+            i++;
+        }
+        int ans = 0;
+        boolean overflow = false;
+        while(i < str.length()){
+            if(str.charAt(i) >= 48 && str.charAt(i)<=57){
+                int newAns = ans*10 + (str.charAt(i) - '0');
+                if(Integer.MAX_VALUE /  10 < ans || newAns < ans){
+                    overflow = true;
+                    break;
+                }
+                ans = newAns;
+                i++;
+            }else{
+                break;
+            }
+        }
+        if(overflow){
+            return str.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+        }
+        return str.charAt(0) == '-' ? ans* -1 : ans;
+    }
 }
