@@ -10,6 +10,7 @@ public class RemoveDuplicateFromArray {
         printArray(arr);
         removeDuplicate(arr);
         printArray(arr);
+        "raj".substring(0,5);
     }
 
 
