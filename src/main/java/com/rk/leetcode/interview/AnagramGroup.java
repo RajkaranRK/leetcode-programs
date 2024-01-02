@@ -52,11 +52,11 @@ public class AnagramGroup {
     
     
     public boolean isAnagram(String first, String second){
-        if(first.length() == 0 && second.length() == 0){
-            return true;
-        }
         if(first == null || second == null){
             return false;
+        }
+        if(first.length() == 0 && second.length() == 0){
+            return true;
         }
         if(first.length() != second.length()){
             return false;
