@@ -6,7 +6,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class StringDividePerson {
 
     public static void main(String[] args) {
-        String result = divide("abcdefgh",7);
+        String result = divide("abcdefgh",3);
         System.out.println(result);
     }
 
