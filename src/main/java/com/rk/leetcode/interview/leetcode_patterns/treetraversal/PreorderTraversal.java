@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview.tree;
+package com.rk.leetcode.interview.leetcode_patterns.treetraversal;
 
 import com.rk.leetcode.TreeNode;
 import lombok.extern.slf4j.Slf4j;

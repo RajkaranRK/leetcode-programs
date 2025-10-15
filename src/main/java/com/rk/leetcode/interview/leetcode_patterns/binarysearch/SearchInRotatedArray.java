@@ -1,4 +1,4 @@
-package com.rk.leetcode.interview;
+package com.rk.leetcode.interview.leetcode_patterns.binarysearch;
 
 public class SearchInRotatedArray {
 

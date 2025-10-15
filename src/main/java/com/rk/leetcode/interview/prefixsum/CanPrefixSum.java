@@ -10,7 +10,7 @@ import java.util.*;
 public class CanPrefixSum {
 
     public static void main(String[] args) {
-        int arr[] = {9,4,0,20,3,10,5};
+        int[] arr = {9,4,0,20,3,10,5};
         int target = 9;
 
         log.info("prefix sum exists {} ",canPrefixSum(arr,target));
@@ -53,7 +53,7 @@ public class CanPrefixSum {
                 dataMap.put(prefixSum,i);
             }
         }
-        return Arrays.asList(new Integer(-1),new Integer(-1));
+        return Arrays.asList(-1,-1);
     }
 
 
