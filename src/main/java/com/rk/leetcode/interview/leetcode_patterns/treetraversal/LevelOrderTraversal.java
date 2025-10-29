@@ -12,16 +12,17 @@ public class LevelOrderTraversal {
     public static void main(String[] args) {
         TreeNode root = TreeBuilder.buildTree(new int[]{1,2,3,4,5,6,7});
         levelOrderTraversal(root);
+        System.out.println("");
         log.info("******************");
     }
 
 
-    private static void levelOrderTraversal(TreeNode root){
+    public static void levelOrderTraversal(TreeNode root){
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while(!queue.isEmpty()){
             TreeNode current = queue.poll();
-            log.info("data :{} ",current.val);
+            System.out.print(current.val+",");
             if (current.left != null)
                 queue.offer(current.left);
             if (current.right != null)

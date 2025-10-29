@@ -23,7 +23,7 @@ public class PreorderTraversal {
     }
 
 
-    private static void preorderTraversal(TreeNode root) {
+    public static void preorderTraversal(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -33,7 +33,7 @@ public class PreorderTraversal {
     }
 
 
-    private static void preorderTraversalIterative(TreeNode root) {
+    public static void preorderTraversalIterative(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
         while(!stack.isEmpty() || current != null) {
