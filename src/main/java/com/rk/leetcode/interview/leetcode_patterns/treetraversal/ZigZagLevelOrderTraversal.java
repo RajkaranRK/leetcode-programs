@@ -3,10 +3,7 @@ package com.rk.leetcode.interview.leetcode_patterns.treetraversal;
 import com.rk.leetcode.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 
 /**
@@ -19,7 +16,7 @@ public class ZigZagLevelOrderTraversal {
 
     public static void main(String[] args) {
         TreeNode root = TreeBuilder.buildTree(new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15});
-        zigZagTraverse(root);
+        zigZagTraverse2(root);
         System.out.println("");
         log.info("******************");
     }
@@ -51,6 +48,36 @@ public class ZigZagLevelOrderTraversal {
                     if(node.right != null) queue.offer(node.right);
                 }
             }
+            invertFlag = !invertFlag;
+        }
+        log.info("Traversal Result : {}",results);
+    }
+
+
+    public static void zigZagTraverse2(TreeNode root){
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        List<Integer> results = new ArrayList<>();
+        boolean invertFlag = false;
+        while(!queue.isEmpty()) {
+            Stack<Integer> stack = new Stack<>();
+            log.info("Queue :{}",queue.stream().map(node -> node.val).toList());
+            List<Integer> level = new ArrayList<>();
+            int size = queue.size();
+            for (int i =0; i<size; i++){
+                TreeNode node = queue.poll();
+                if(invertFlag){
+                    stack.push(node.val);
+                }else{
+                    level.add(node.val);
+                }
+                if(node.left != null) queue.offer(node.left);
+                if(node.right != null) queue.offer(node.right);
+            }
+            while (!stack.isEmpty()){
+                level.add(stack.pop());
+            }
+            results.addAll(level);
             invertFlag = !invertFlag;
         }
         log.info("Traversal Result : {}",results);
