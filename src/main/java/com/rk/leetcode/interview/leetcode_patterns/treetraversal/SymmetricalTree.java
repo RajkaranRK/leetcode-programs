@@ -3,7 +3,10 @@ package com.rk.leetcode.interview.leetcode_patterns.treetraversal;
 import com.rk.leetcode.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 
-
+/**
+ * code to check the tree are symmetrical or not
+ * i.e. mirror image or not
+ */
 @Slf4j
 public class SymmetricalTree {
 
