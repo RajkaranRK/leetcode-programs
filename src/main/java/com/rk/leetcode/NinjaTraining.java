@@ -3,6 +3,15 @@ package com.rk.leetcode;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * You are given:
+ * 	•	n days
+ * 	•	3 activities each day: 0, 1, and 2
+ * 	•	points[i][j] = points earned on day i for activity j
+ * 	•	Rule: You cannot do the same activity on two consecutive days
+ *
+ * Goal: Maximize total points.
+ */
 @Slf4j
 public class NinjaTraining {
 
